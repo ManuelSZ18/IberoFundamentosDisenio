@@ -28,5 +28,3 @@ class bike {
         this.sizeFrame;
     }
 }
-
-Manuel
