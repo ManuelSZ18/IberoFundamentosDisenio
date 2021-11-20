@@ -8,16 +8,16 @@
 */
 
 class bike {
-    Brand: string;
+    brand: string;
     sizeFrame: string;
 
-    constructor(Brand: string, sizeFrame: string){
-    this.Brand =  Brand;
+    constructor(brand: string, sizeFrame: string){
+    this.brand =  brand;
     this.sizeFrame = sizeFrame;
     }
 
     getBrand(){
-        return this.Brand;
+        return this.brand;
     }
 
     getSizeBrand(){
@@ -25,7 +25,7 @@ class bike {
     }
 
     saveBrand(){
-        this.Brand;
+        this.brand;
     }
 
     saveSizeBrand(){
@@ -85,9 +85,45 @@ class sizeFramesOnStock{
     no altere el comportamiento de la clase padre.
 */
 
-interface ibike{
-    Brand: string;
+// interface Ibike{
+//     brand: string;
+//     sizeFrame: string;
+//     color: string;
+//     watts: number;
+//     batteryAmp: number;
+//     motorCC: number;
+// }
+
+// class montainBike implements Ibike{
+//     brand: "GW";
+//     sizeFrame: "L";
+//     color: "Black";
+//     watts: 500;
+//     batteryAmp: 20;
+
+// }
+
+/* -------------------------------------------------------------------------- */
+
+interface Ibike{
+    brand: string;
     sizeFrame: string;
-    speeds: number;
-    
+    color: string;
+}
+
+interface IelectricBike extends Ibike {
+    watts: number;
+    batteryAmp: number;
+}
+
+interface IoilBike extends Ibike {    
+    motorCC: number;
+}
+
+class montainBike implements IelectricBike{
+    brand: "GW";
+    sizeFrame: "L";
+    color: "Black";
+    watts: 500;
+    batteryAmp: 20;
 }
