@@ -7,13 +7,16 @@
 */
 
 class bike {
-    constructor(brand, sizeFrame){
-    this.brand = brand;
+    Brand: string;
+    sizeFrame: string;
+
+    constructor(Brand: string, sizeFrame: string){
+    this.Brand =  Brand;
     this.sizeFrame = sizeFrame;
     }
 
     getBrand(){
-        return this.brand;
+        return this.Brand;
     }
 
     getSizeBrand(){
@@ -21,7 +24,7 @@ class bike {
     }
 
     saveBrand(){
-        this.brand;
+        this.Brand;
     }
 
     saveSizeBrand(){
@@ -41,24 +44,25 @@ o funcion sin modificar.
 
 class sizeFramesOnStock{
 
-    sizeFrames = ["S", "M", "L"];
+    sizeFrames: String[] =["S", "M", "L"];
 
 /*
-El indexOf devuelve la posicion del elemento en el array
+    El indexOf devuelve la posicion del elemento en el array
     
-Si retorna -1 es por que el elemento no existe y por tanto no tiene indice
+    Si retorna -1 es por que el elemento no existe y por tanto no tiene indice
 */
 
-    OnStock(sizeFrame){
+    OnStock(sizeFrame: String){
         return this.sizeFrames.indexOf(sizeFrame) !== -1;
     }
 
-/* Hasta aqui la clase contiene los tamaños disponibles
+/* 
+    Hasta aqui la clase contiene los tamaños disponibles
     y a su vez, tiene una funcion que realiza una busqueda dentro
     del array y retorna una información de acuerdo a lo busqueda realizada
 */
 
-    pushSizeFrame(sizeFrame){
+    pushSizeFrame(sizeFrame: String){
         this.sizeFrames.push(sizeFrame);
     }
 /*
@@ -66,5 +70,24 @@ Si retorna -1 es por que el elemento no existe y por tanto no tiene indice
     a la clase, sin cambiar la funcionalidad que realizaba
     anteriormente.
 */
+
+}
+
+
+/*
+    PRINCIPIO DE SUSTITUCION DE LISKOV
+
+    Este principio indica que cuando se usa una clase
+    determinada y luego se crea otra clase que extienda de la 
+    primera, entonces cualquier objeto creado a partir de esta puede
+    ser cambiada por la otra, obligando asi a que cualquier clase hija
+    no altere el comportamiento de la clase padre.
+*/
+
+/*  Atributos clase: Llantas, manubrio, pedales, frenos 
+    Metodos: 
+*/
+
+class sell {
 
 }
