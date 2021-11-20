@@ -1,3 +1,4 @@
+
 /* PRINCIPIO DE RESPONSABILIDAD UNICA
     Este principio nos recomienda que una clase o funcion debe centrarse
     especificamente en cumplir con una funcion y por tanto debe existir
@@ -84,10 +85,9 @@ class sizeFramesOnStock{
     no altere el comportamiento de la clase padre.
 */
 
-/*  Atributos clase: Llantas, manubrio, pedales, frenos 
-    Metodos: 
-*/
-
-class sell {
-
+interface ibike{
+    Brand: string;
+    sizeFrame: string;
+    speeds: number;
+    
 }
