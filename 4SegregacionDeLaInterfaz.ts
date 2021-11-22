@@ -18,3 +18,14 @@ interface IoilBike extends Ibike {
     motorCC: number;
 }
 
+const bikeManuel : IoilBike = {
+    brand: "GW",
+    sizeFrame: "L",
+    color: "Black",
+    motorCC: 350
+};
+
+console.log(bikeManuel.brand)
+console.log(bikeManuel.sizeFrame)
+console.log(bikeManuel.color)
+console.log(bikeManuel.motorCC)

@@ -1,29 +1,17 @@
-
 /*Principio de Inversion de Dependencias*/
-
 /*Ejemplo de una dependicia por concreción y contraria a este principio*/
-
-class shimano{
-    
-    provider : string;
-    
-    constructor(shimanoFamily : string){
+var shimano = /** @class */ (function () {
+    function shimano(shimanoFamily) {
         this.provider = shimanoFamily;
     }
-    
-}
-
+    return shimano;
+}());
 /*Ejemplo de una dependicia por abstraccion y siguiendo este principio*/
-
-class provider{
-    
-    provider : string;
-
-    constructor(provider : string){
+var provider = /** @class */ (function () {
+    function provider(provider) {
         this.provider = provider;
     }
-}
-
-const prueba5 = new provider("Shimano");
-
+    return provider;
+}());
+var prueba5 = new provider("Shimano");
 console.log(prueba5.provider);

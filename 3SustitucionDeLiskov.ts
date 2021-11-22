@@ -46,9 +46,25 @@ interface IoilBike extends Ibike {
 }
 
 class montainBike implements IelectricBike{
-    brand: "GW";
-    sizeFrame: "L";
-    color: "Black";
-    watts: 500;
-    batteryAmp: 20;
+
+    brand : string;
+    sizeFrame : string;
+    color : string;
+    watts : number;
+    batteryAmp: number;
 }
+
+let prueba3 = new montainBike;
+
+prueba3.brand = "Shimano";
+prueba3.sizeFrame = "S";
+prueba3.color = "White";
+prueba3.watts = 500;
+prueba3.batteryAmp = 20;
+
+
+console.log(prueba3.brand);
+console.log(prueba3.sizeFrame);
+console.log(prueba3.color);
+console.log(prueba3.watts);
+console.log(prueba3.batteryAmp);

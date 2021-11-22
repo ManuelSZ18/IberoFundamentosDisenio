@@ -11,15 +11,16 @@ class bike {
     sizeFrame: string;
 
     constructor(brand: string, sizeFrame: string){
-    this.brand =  brand;
-    this.sizeFrame = sizeFrame;
+
+        this.brand =  brand;
+        this.sizeFrame = sizeFrame;
     }
 
-    getBrand(){
+    getBrand() : string{
         return this.brand;
     }
 
-    getSizeBrand(){
+    getSizeBrand() : string{
         return this.sizeFrame;
     }
 
@@ -31,3 +32,8 @@ class bike {
         this.sizeFrame;
     }
 }
+
+let prueba = new bike("Shimano", "L");
+
+console.log("Marca: " + prueba.brand );
+console.log("Tamaño: " + prueba.sizeFrame );
